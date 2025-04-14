@@ -409,6 +409,11 @@ section#mini-hero{
   border-radius: 30px;
 
 }
+.brand-block img {
+  height: 50px; /* Adjust size here */
+  object-fit: contain;
+  background: transparent;
+}
 
 .brand-names {
   width: -webkit-fill-available;
