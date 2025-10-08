@@ -36,8 +36,10 @@
   </div>
 
   <!-- Nav Section Starts -->
-  <header id="navigation">
-      <nav class="navbar navbar-expand-lg position-absolute px-0 px-md-4 py-4">
+  <header id="navigation" >
+
+
+    <nav class="navbar navbar-expand-lg position-absolute px-0 px-md-4  " style="    margin-top: -49px;">
 
       <div class="container-fluid">
 
@@ -77,98 +79,94 @@
             </ul>
             <ul class="navbar-nav justify-content-end align-items-center mt-4 mb-2 mt-lg-0 mb-lg-0"></ul>
 
-              <!-- Modal -->
-              <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
+            <!-- Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
 
-    <!-- Modal Header -->
-    <div class="modal-header">
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
 
-    <div class="modal-body">
-      <div class="tabs-listing">
-        <!-- Tabs -->
-        <nav>
-          <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
-            <button class="btn btn-outline-primary text-uppercase px-4 py-2 me-4 active"
-              id="nav-email-tab" data-bs-toggle="tab" data-bs-target="#nav-email" type="button"
-              role="tab" aria-controls="nav-email" aria-selected="true">Email</button>
-            <button class="btn btn-outline-primary text-uppercase px-4 py-2"
-              id="nav-whatsapp-tab" data-bs-toggle="tab" data-bs-target="#nav-whatsapp" type="button"
-              role="tab" aria-controls="nav-whatsapp" aria-selected="false">WhatsApp</button>
-          </div>
-        </nav>
+                  <div class="modal-body">
+                    <div class="tabs-listing">
+                      <!-- Tabs -->
+                      <nav>
+                        <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
+                          <button class="btn btn-outline-primary text-uppercase px-4 py-2 me-4 active"
+                            id="nav-email-tab" data-bs-toggle="tab" data-bs-target="#nav-email" type="button" role="tab"
+                            aria-controls="nav-email" aria-selected="true">Email</button>
+                          <button class="btn btn-outline-primary text-uppercase px-4 py-2" id="nav-whatsapp-tab"
+                            data-bs-toggle="tab" data-bs-target="#nav-whatsapp" type="button" role="tab"
+                            aria-controls="nav-whatsapp" aria-selected="false">WhatsApp</button>
+                        </div>
+                      </nav>
 
-        <!-- Tab Content -->
-        <div class="tab-content" id="nav-tabContent">
+                      <!-- Tab Content -->
+                      <div class="tab-content" id="nav-tabContent">
 
-          <!-- Email Tab -->
-          <div class="tab-pane fade active show" id="nav-email" role="tabpanel"
-            aria-labelledby="nav-email-tab">
-            <form id="emailForm" class="form-group flex-wrap p-3 ">
-              <div class="form-input col-lg-12 my-3">
-                <label for="emailInput" class="form-label fs-6 text-uppercase fw-bold text-black">
-                  Your Email
-                </label>
-                <input type="email" id="emailInput" name="email" placeholder="Enter your email"
-                  class="form-control ps-3" required>
+                        <!-- Email Tab -->
+                        <div class="tab-pane fade active show" id="nav-email" role="tabpanel"
+                          aria-labelledby="nav-email-tab">
+                          <form id="emailForm" class="form-group flex-wrap p-3 ">
+                            <div class="form-input col-lg-12 my-3">
+                              <label for="emailInput" class="form-label fs-6 text-uppercase fw-bold text-black">
+                                Your Email
+                              </label>
+                              <input type="email" id="emailInput" name="email" placeholder="Enter your email"
+                                class="form-control ps-3" required>
+                            </div>
+                            <div class="form-input col-lg-12 my-3">
+                              <label for="emailMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
+                                Your Message / Prompt
+                              </label>
+                              <textarea id="emailMessage" name="message" rows="4"
+                                placeholder="Type your request here..." class="form-control ps-3" required></textarea>
+                            </div>
+                            <div class="d-grid my-3">
+                              <button type="submit"
+                                class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                                Send via Email
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+
+                        <!-- WhatsApp Tab -->
+                        <div class="tab-pane fade" id="nav-whatsapp" role="tabpanel" aria-labelledby="nav-whatsapp-tab">
+                          <form id="whatsappForm" class="form-group flex-wrap p-3 ">
+                            <div class="form-input col-lg-12 my-3">
+                              <label for="phoneInput" class="form-label fs-6 text-uppercase fw-bold text-black">
+                                WhatsApp Number
+                              </label>
+                              <input type="tel" id="phoneInput" name="phone" placeholder="+1 234 567 890"
+                                class="form-control ps-3" required>
+                            </div>
+                            <div class="form-input col-lg-12 my-3">
+                              <label for="whatsappMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
+                                Your Message / Prompt
+                              </label>
+                              <textarea id="whatsappMessage" name="message" rows="4"
+                                placeholder="Type your request here..." class="form-control ps-3" required></textarea>
+                            </div>
+                            <div class="d-grid my-3">
+                              <button type="submit" class="btn btn-success btn-lg text-uppercase btn-rounded-none fs-6">
+                                Send via WhatsApp
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
               </div>
-              <div class="form-input col-lg-12 my-3">
-                <label for="emailMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
-                  Your Message / Prompt
-                </label>
-                <textarea id="emailMessage" name="message" rows="4"
-                  placeholder="Type your request here..."
-                  class="form-control ps-3" required></textarea>
-              </div>
-              <div class="d-grid my-3">
-                <button type="submit"
-                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                  Send via Email
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <!-- WhatsApp Tab -->
-          <div class="tab-pane fade" id="nav-whatsapp" role="tabpanel"
-            aria-labelledby="nav-whatsapp-tab">
-            <form id="whatsappForm" class="form-group flex-wrap p-3 ">
-              <div class="form-input col-lg-12 my-3">
-                <label for="phoneInput" class="form-label fs-6 text-uppercase fw-bold text-black">
-                  WhatsApp Number
-                </label>
-                <input type="tel" id="phoneInput" name="phone" placeholder="+1 234 567 890"
-                  class="form-control ps-3" required>
-              </div>
-              <div class="form-input col-lg-12 my-3">
-                <label for="whatsappMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
-                  Your Message / Prompt
-                </label>
-                <textarea id="whatsappMessage" name="message" rows="4"
-                  placeholder="Type your request here..."
-                  class="form-control ps-3" required></textarea>
-              </div>
-              <div class="d-grid my-3">
-                <button type="submit"
-                  class="btn btn-success btn-lg text-uppercase btn-rounded-none fs-6">
-                  Send via WhatsApp
-                </button>
-              </div>
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
+            </div>
     </nav>
   </header>
 
@@ -181,13 +179,15 @@ aria-hidden="true">
       data-aos-easing="ease-in-sine">
       <div class="row align-items-center g-5 py-5">
         <div class=" col-lg-6">
-        
+
           <h1 class=" text-capitalize text-light my-3">WE'RE PROVIDING TECH FIELD SERVICES.</h1>
           <p class="text-light mb-4">Elite TechWave LLC is a Company of Elite Engineers & IT Service Providers.</p>
-            <p class="text-light mb-4">We empower businesses with innovative technology, strategic consulting, and exceptional support.
-              We are serving clients in New York, New Jersey, And Connecticut.</p>
+          <p class="text-light mb-4">We empower businesses with innovative technology, strategic consulting, and
+            exceptional support.
+            We are serving clients in New York, New Jersey, And Connecticut.</p>
           <div class="">
-            <button type="button" class="btn btn-primary me-3 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-primary me-3 mb-2" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
               <span class="btnText">Get Your Quote</span>
               <span class="btnTwo">
                 <iconify-icon icon="prime:arrow-right" class="btn-arrow"></iconify-icon>
@@ -203,7 +203,7 @@ aria-hidden="true">
   </section>
 
   <!-- brand section starts  -->
- <!-- <section id="brands" class="container-fluid brand-block ">
+  <!-- <section id="brands" class="container-fluid brand-block ">
     <div class=" brand-names d-lg-flex justify-content-between ">
       <img class=" mb-5 mb-lg-0 me-4 " src="images/Cisco.png" alt="">
       <img class=" mb-5 mb-lg-0 me-4 " src="images/Dell.png" alt="">
@@ -226,7 +226,7 @@ aria-hidden="true">
       <img src="images/Hemmersbach.png" alt="Hemmersbach">
     </div>
   </section>
-  
+
 
   <!-- steps section starts  -->
   <section id="steps">
@@ -236,8 +236,8 @@ aria-hidden="true">
         <div class="col-md-4 mt-4">
           <div class="step-post text-center  px-5">
             <div class="step-icon mb-3">
-              <iconify-icon class="iconify-step" style="background: #5399F4 ;"
-                icon="mdi:download-circle-outline"></iconify-icon>
+              <iconify-icon class="iconify-step" style="background: #5399F4 ;" icon="mdi:download-circle-outline">
+              </iconify-icon>
             </div>
             <h3 class=" ">Send us your task</h3>
             <p class=" ">use our website or our email to send us your IT task.</p>
@@ -246,8 +246,8 @@ aria-hidden="true">
         <div class="col-md-4 mt-4">
           <div class="step-post text-center  px-5">
             <div class="step-icon mb-3">
-              <iconify-icon class="iconify-step" style="background: #F5C037 ;"
-                icon="mdi:folder-file-outline"></iconify-icon>
+              <iconify-icon class="iconify-step" style="background: #F5C037 ;" icon="mdi:folder-file-outline">
+              </iconify-icon>
             </div>
             <h3 class=" ">Get your quote</h3>
             <p class=" ">Recive best in the market value for you IT task.</p>
@@ -276,16 +276,18 @@ aria-hidden="true">
         <div class=" col-lg-6" data-aos="fade-up" data-aos-easing="ease-in-sine">
           <h6>Elite Engineers, Best Value</h6>
           <h2 class=" text-capitalize  my-3">Best Field Technitians with trusted services</h2>
-          <p class="pb-5">Our team of experienced engineers is dedicated to ensuring your IT tasks are handled efficiently and professionally.
-            We specialize in hardware repair, including laptops, PCs, and printers. Our engineers also have strong expertise in network installation and configuration, 
+          <p class="pb-5">Our team of experienced engineers is dedicated to ensuring your IT tasks are handled
+            efficiently and professionally.
+            We specialize in hardware repair, including laptops, PCs, and printers. Our engineers also have strong
+            expertise in network installation and configuration,
             making sure your system is set up right the first time, with lasting results.</p>
 
-            <div class="">
-              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Get Your Quote
-              </button>
-            </div>
-            
+          <div class="">
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Get Your Quote
+            </button>
+          </div>
+
         </div>
 
       </div>
@@ -310,7 +312,8 @@ aria-hidden="true">
           <iconify-icon class="feature-icon" icon="mdi:nas"></iconify-icon>
           <div>
             <h3 class="">Network Support</h3>
-            <p>On-site IT support services, include installing, configuring, maintaining, or troubleshooting servers, network devices, cables.
+            <p>On-site IT support services, include installing, configuring, maintaining, or troubleshooting servers,
+              network devices, cables.
             </p>
           </div>
         </div>
@@ -318,7 +321,8 @@ aria-hidden="true">
           <iconify-icon class="feature-icon" icon="mdi:lock-check"></iconify-icon>
           <div>
             <h3 class="">Network Security</h3>
-            <p>Smooth software & hardware installations Of firewalls and other methods, ensuring Secure and Reliable network.
+            <p>Smooth software & hardware installations Of firewalls and other methods, ensuring Secure and Reliable
+              network.
             </p>
           </div>
         </div>
@@ -326,7 +330,8 @@ aria-hidden="true">
           <iconify-icon class="feature-icon" icon="mdi:database"></iconify-icon>
           <div>
             <h3 class="">Hardware Repair</h3>
-            <p> fast and reelable hardware repair for all your devices, including PCs, laptops, Printers, and network equipments.
+            <p> fast and reelable hardware repair for all your devices, including PCs, laptops, Printers, and network
+              equipments.
             </p>
           </div>
         </div>
@@ -363,14 +368,14 @@ aria-hidden="true">
           <h6>Ready for</h6>
           <h2 class=" text-capitalize  my-3">IT Guy at Your Door</h2>
           <p class="mb-5">We are freelance IT professionals with advanced training and hands-on experience, dedicated to
-             helping you tackle technical tasks and make your business run more smoothly — and stress-free. </p>
+            helping you tackle technical tasks and make your business run more smoothly — and stress-free. </p>
 
-            <div class="">
-              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Get Started
-              </button>
-            </div>
-            
+          <div class="">
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Get Started
+            </button>
+          </div>
+
         </div>
       </div>
     </div>
@@ -391,7 +396,8 @@ aria-hidden="true">
             </div>
             <div class="p-4">
               <h3><a href="single-post.html" class="blog-link">Network Instalation</a></h3>
-              <p> we have experience installing and configuring all network devices, including router, switches, and access points.</p>
+              <p> we have experience installing and configuring all network devices, including router, switches, and
+                access points.</p>
             </div>
           </div>
         </div>
@@ -402,7 +408,8 @@ aria-hidden="true">
             </div>
             <div class="p-4">
               <h3><a href="single-post.html" class="blog-link"> Network Security </a> </h3>
-              <p> we provide our customers with High-end secure hardware and software solutions, including firewalls, IDS, IPS.</p>
+              <p> we provide our customers with High-end secure hardware and software solutions, including firewalls,
+                IDS, IPS.</p>
             </div>
           </div>
         </div>
@@ -413,7 +420,8 @@ aria-hidden="true">
             </div>
             <div class="p-4">
               <h3><a href="single-post.html" class="blog-link">Hardware Repair </a> </h3>
-              <p> our team of great engineers and technicians are very experienced in hardware repair And replacement.</p>
+              <p> our team of great engineers and technicians are very experienced in hardware repair And replacement.
+              </p>
             </div>
           </div>
         </div>
@@ -444,7 +452,7 @@ aria-hidden="true">
           </h2>
           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
             <div class="accordion-body">
-              <p>We currently serve clients across the NYC and NJ metro areas, with flexible availability 
+              <p>We currently serve clients across the NYC and NJ metro areas, with flexible availability
                 for both on-site and remote support.</p>
             </div>
           </div>
@@ -460,7 +468,7 @@ aria-hidden="true">
           <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingTwo">
             <div class="accordion-body">
-              <p>Most requests are scheduled within 24 to 48 hours. 
+              <p>Most requests are scheduled within 24 to 48 hours.
                 Emergency or same-day services may also be available depending on your location.</p>
             </div>
           </div>
@@ -477,7 +485,7 @@ aria-hidden="true">
             aria-labelledby="panelsStayOpen-headingThree">
             <div class="accordion-body">
               <p>We specialize in laptops, desktops, printers, routers, switches, and a variety of
-                 networking hardware — both for home users and small businesses.</p>
+                networking hardware — both for home users and small businesses.</p>
             </div>
           </div>
         </div>
@@ -492,7 +500,8 @@ aria-hidden="true">
           <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingFour">
             <div class="accordion-body">
-              <p>Yes, we offer a satisfaction guarantee. If the issue isn't resolved or the service was not delivered as agreed, 
+              <p>Yes, we offer a satisfaction guarantee. If the issue isn't resolved or the service was not delivered as
+                agreed,
                 we’ll work with you to issue a partial or full refund based on the situation.</p>
             </div>
           </div>
@@ -525,7 +534,7 @@ aria-hidden="true">
           <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
             aria-labelledby="panelsStayOpen-headingSix">
             <div class="accordion-body">
-              <p>Yes, we offer both one-time fixes and ongoing support packages depending 
+              <p>Yes, we offer both one-time fixes and ongoing support packages depending
                 on your business or personal IT needs.</p>
             </div>
           </div>
@@ -544,7 +553,7 @@ aria-hidden="true">
       <div class="text-center py-5 " data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="600">
         <h6>Get Elite TechWave for free</h6>
         <h1 class=" text-capitalize mb-3">Book Us Twice, Get the Third Visit Free!</h1>
-        <p class="">When you book our services twice within a 10-day period, 
+        <p class="">When you book our services twice within a 10-day period,
           you’ll receive a third visit absolutely free — as long as the task is under two hours.</p>
         <div class="">
 
@@ -558,18 +567,18 @@ aria-hidden="true">
             </span>
           </a>
         </div>
-        
+
         <!-- Contact Us Modal -->
         <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-        
+
               <!-- Header -->
               <div class="modal-header">
                 <h5 class="modal-title fw-bold" id="contactModalLabel">Get in Touch</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-        
+
               <!-- Body -->
               <div class="modal-body text-center">
                 <p class="mb-2">
@@ -583,16 +592,16 @@ aria-hidden="true">
                   <a href="tel:+1234567890">+1 201 658 9102</a>
                 </p>
               </div>
-        
+
               <!-- Footer -->
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
-        
+
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
   </section>
@@ -608,7 +617,7 @@ aria-hidden="true">
             <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize ">Our team </a></li>
             <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize ">CEO </a></li>
             <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize ">our website</a></li>
-         
+
           </ul>
         </div>
 
@@ -618,14 +627,14 @@ aria-hidden="true">
             <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">Team@EliteTechWave.com</a></li>
             <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">CEO@EliteTEchWave.com</a></li>
             <li class="nav-item mb-2"><a href="#" class="footer-link text-capitalize">EliteTechWave.com</a></li>
-      
+
           </ul>
         </div>
 
 
         <div class=" col-md-3 mt-5 mt-md-0 ">
           <img src="images/EliteTechWae.png" alt="">
-          
+
         </div>
 
       </footer>
@@ -642,9 +651,15 @@ aria-hidden="true">
 
         </div>
         <div class="col-md-1 d-flex align-items-center justify-content-between">
-          <a href="#" class="social-link" target="_blank"><iconify-icon icon="mdi:email"></iconify-icon></a>
-          <a href="#" class="social-link" target="_blank"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
-          <a href="#" class="social-link" target="_blank"><iconify-icon icon="mdi:phone"></iconify-icon></a>
+          <a href="#" class="social-link" target="_blank">
+            <iconify-icon icon="mdi:email"></iconify-icon>
+          </a>
+          <a href="#" class="social-link" target="_blank">
+            <iconify-icon icon="mdi:linkedin"></iconify-icon>
+          </a>
+          <a href="#" class="social-link" target="_blank">
+            <iconify-icon icon="mdi:phone"></iconify-icon>
+          </a>
         </div>
 
       </footer>
@@ -657,8 +672,8 @@ aria-hidden="true">
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 
@@ -668,8 +683,3 @@ aria-hidden="true">
 </body>
 
 </html>
-
-
-
-
-
