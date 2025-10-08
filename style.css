@@ -1,9 +1,7 @@
 /*
-Theme Name: HostHub
-Theme URI: 
-Author: TemplatesJungle
-Author URI: https://templatesjungle.com/
-Description: Hosthub is a Free Bootstrap Website Template for Web Hosting by TemplatesJungle.
+Theme Name: Elite TehWave  
+Author URI: https://EliteTechWave.com
+Description: A Company Website.
 Version: 1.0
 */
 
@@ -243,6 +241,9 @@ a:hover {
 
 
 /*---- navigation section style start ----*/
+.navbar-brand img {
+  height: 180px;
+}
 
 a.nav-link::after {
   content: "";
@@ -332,7 +333,6 @@ iconify-icon.navbar-icon {
 }
 
 
-
 @media only screen and (max-width: 992px) {
   a.nav-link {
     color: var(--body-text-color) !important;
@@ -350,8 +350,6 @@ iconify-icon.navbar-icon {
   }
 
 }
-
-
 
 /*---- hero section style start ----*/
 section#hero {
@@ -396,37 +394,117 @@ section#mini-hero{
 }
 
 
-/*---- brand section style start ----*/
+/* - Brand Logo
+------------------------------------------------------------- */
 .brand-block {
   display: flex;
+  flex-direction: column; /* stack heading on top, logos below */
+  justify-content: center;
   align-items: center;
-  padding: 87px 160px;
-  width: 80%;
-  margin-top: -95px;
+  gap: 2rem;
+  padding: 20px 0px; /* smaller rectangle (was 60px 80px) */
+  width: 75%; /* narrower container (was 85%) */
+  margin: -95px auto 0;
   background: var(--background-color);
   border: 1px solid #EBEFF4;
   box-shadow: 0px 0px 26px rgba(24, 69, 123, 0.16);
   border-radius: 30px;
-
+  text-align: center;
 }
+
 .brand-block img {
-  height: 50px; /* Adjust size here */
+  max-height: 60px;
+  width: auto;
   object-fit: contain;
-  background: transparent;
+  transition: transform 0.2s ease-in-out;
+}
+
+.brand-block img:hover {
+  transform: scale(1.05);
+}
+
+.brand-section-title {
+  font-size: 1.1rem; /* bigger than before (was 0.9rem) */
+  text-align: center; /* always centered */
+  margin-bottom: 1rem;
+  color: var(--body-text-color);
 }
 
 .brand-names {
-  width: -webkit-fill-available;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* distribute logos evenly */
+  align-items: center;
+  gap: 2rem;
+  width: 100%; /* make logos stretch across container */
 }
 
-@media only screen and (max-width: 1200px) {
+/* Responsive Adjustments */
+@media (max-width: 992px) {
   .brand-block {
-    padding: 87px 50px;
+    padding: 35px 30px; /* smaller rectangle on tablets */
+    width: 85%; /* was 90% */
+    gap: 1.5rem;
   }
 
+  .brand-block img {
+    max-height: 50px;
+  }
 }
 
+@media (max-width: 768px) {
+  .brand-block {
+    padding: 30px 20px; /* smaller rectangle on phones */
+    width: 90%; /* was 95% */
+  }
 
+  .brand-block img {
+    max-height: 40px;
+    margin: 10px auto;
+  }
+
+  .brand-section-title {
+    font-size: 1rem; /* keep heading readable on mobile */
+    margin-bottom: 1rem;
+  }
+}
+
+/* Increase HP and Oracle logo sizes */
+.brand-names img[alt*="HP"],
+.brand-names img[alt*="hp"],
+.brand-names img[alt*="Hewlett"] {
+  max-height: 70px;
+}
+
+.brand-names img[alt*="Oracle"],
+.brand-names img[alt*="Orecal"] {
+  max-height: 90px; /* Oracle bigger */
+}
+
+/* Make Hemmersbach logo smaller */
+.brand-names img[alt*="Hemmersbach"],
+.brand-names img[alt*="hemmersbach"] {
+  max-height: 50px; /* smaller than the rest */
+}
+
+@media (max-width: 768px) {
+  .brand-names img[alt*="HP"],
+  .brand-names img[alt*="hp"],
+  .brand-names img[alt*="Hewlett"] {
+    max-height: 55px;
+  }
+
+  .brand-names img[alt*="Oracle"],
+  .brand-names img[alt*="Orecal"] {
+    max-height: 75px; /* Oracle still bigger */
+  }
+
+  /* Hemmersbach logo smaller on mobile too */
+  .brand-names img[alt*="Hemmersbach"],
+  .brand-names img[alt*="hemmersbach"] {
+    max-height: 40px;
+  }
+}
 
 
 /*---- steps section style start  ----*/
@@ -438,9 +516,6 @@ iconify-icon.iconify-step {
   border-radius: 60px;
   opacity: 0.8;
 }
-
-
-
 
 /*---- feature section style start ----*/
 
@@ -459,36 +534,15 @@ iconify-icon.feature-icon {
 
 }
 
-
-
-
-/*---- testimonial section style start ----*/
-
-
-.card-body {
-  filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.2));
-  padding: 40px;
-  padding-bottom: 10px;
+/*---- blog section style start ----*/
+  
+section#blog {
+  background: var(--background-color);
 }
 
-.card {
-  --bs-card-border-width: 1px;
-  --bs-card-border-color: #EBEFF4;
-  --bs-card-border-radius: 10px;
-}
-
-.testimonial-name {
-  font-weight: 500;
-  font-size: 18px;
+.blog-link {
   color: var(--body-text-color);
-
 }
-
-iconify-icon.testimonial-icon {
-  font-size: 14px;
-  color: #F2B821;
-}
-
 
 /* swiper overide 
 --------------------------------------------------------------*/
@@ -503,58 +557,6 @@ iconify-icon.testimonial-icon {
 .swiper-pagination-bullet-active {
   background: var(--accent-color);
 }
-
-
-
-
-/*---- price plan section style start ----*/
-
-.plan-post {
-  border: 1px solid #EBEFF4;
-  border-radius: 10px;
-}
-
-.plan-btn-outline-primary {
-  background: var(--accent-color);
-  color: var(--grey-color);
-  border-color: var(--accent-color);
-
-}
-
-.dollar {
-  font-family: 'Raleway';
-}
-
-.plan-cost {
-  color: var(--body-text-color);
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 800;
-  font-size: 42px;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-}
-
-.plan-right {
-  color: var(--secondary-color);
-}
-
-
-
-
-/*---- blog section style start ----*/
-
-section#blog {
-  background: var(--background-color);
-}
-
-.blog-link {
-  color: var(--body-text-color);
-}
-
-
-
-
 
 /*---- faq section style start ----*/
 
@@ -601,9 +603,6 @@ section#blog {
   background-image: var(--bs-accordion-btn-icon);
 }
 
-
-
-
 /*---- call to action section style start ----*/
 
 section#action {
@@ -634,91 +633,3 @@ section#action {
     --bs-pagination-active-bg: var(--secondary-color);
     --bs-pagination-active-border-color: var(--bs-border-color);
   }
-
-  /*--------------------------------------------------------------
-  Gallery page style
-  --------------------------------------------------------------*/
-button.filter-button.gallery-btn {
-  letter-spacing: 0.075rem;
-  border: 1px solid var(--bs-border-color);
-  background: transparent;
-  color: var(--bs-black);
-  text-transform: uppercase;
-  font-size: 1rem;
-  transition: all 0.3s ease-in;
-  border-radius: 5px;
-}
-
-button.filter-button.gallery-btn.active {
-  color: var(--bs-light);
-  background: var(--accent-color);
-}
-
-button.filter-button.gallery-btn:hover {
-  color: var(--bs-light);
-  background: var(--accent-color);
-}
-/*chat gpt*/
-
-/* Responsive Brand Logo Fix */
-.brand-block {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 60px 80px;
-  width: 85%;
-  margin: -95px auto 0;
-  background: var(--background-color);
-  border: 1px solid #EBEFF4;
-  box-shadow: 0px 0px 26px rgba(24, 69, 123, 0.16);
-  border-radius: 30px;
-  text-align: center;
-}
-
-.brand-block img {
-  max-height: 60px;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.2s ease-in-out;
-}
-
-.brand-block img:hover {
-  transform: scale(1.05);
-}
-
-.brand-names {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  .brand-block {
-    padding: 50px 40px;
-    width: 90%;
-    gap: 1.5rem;
-  }
-
-  .brand-block img {
-    max-height: 50px;
-  }
-}
-
-@media (max-width: 768px) {
-  .brand-block {
-    flex-direction: column;
-    padding: 40px 30px;
-    width: 95%;
-  }
-
-  .brand-block img {
-    max-height: 40px;
-    margin: 10px auto;
-  }
-}
-
