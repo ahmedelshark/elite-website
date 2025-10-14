@@ -83,91 +83,148 @@
       </div>
     </nav>
   </header>
- <!-- Modal -->
- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
- aria-hidden="true">
- <div class="modal-dialog">
-   <div class="modal-content">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
 
-     <!-- Modal Header -->
-     <div class="modal-header">
-       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-     </div>
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
 
-     <div class="modal-body">
-       <div class="tabs-listing">
-         <!-- Tabs -->
-         <nav>
-           <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
-             <button class="btn btn-outline-primary text-uppercase px-4 py-2 me-4 active"
-               id="nav-email-tab" data-bs-toggle="tab" data-bs-target="#nav-email" type="button" role="tab"
-               aria-controls="nav-email" aria-selected="true">Email</button>
-             <button class="btn btn-outline-primary text-uppercase px-4 py-2" id="nav-whatsapp-tab"
-               data-bs-toggle="tab" data-bs-target="#nav-whatsapp" type="button" role="tab"
-               aria-controls="nav-whatsapp" aria-selected="false">WhatsApp</button>
-           </div>
-         </nav>
+    <div class="modal-body">
+      <div class="tabs-listing">
+        <!-- Tabs -->
+        <nav>
+          <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
+            <button class="btn btn-outline-primary text-uppercase px-4 py-2 me-4 active"
+              id="nav-email-tab" data-bs-toggle="tab" data-bs-target="#nav-email" type="button" role="tab"
+              aria-controls="nav-email" aria-selected="true">Email</button>
+            <button class="btn btn-outline-primary text-uppercase px-4 py-2" id="nav-whatsapp-tab"
+              data-bs-toggle="tab" data-bs-target="#nav-whatsapp" type="button" role="tab"
+              aria-controls="nav-whatsapp" aria-selected="false">Text</button>
+          </div>
+        </nav>
 
-         <!-- Tab Content -->
-         <div class="tab-content" id="nav-tabContent">
+        <!-- Tab Content -->
+        <div class="tab-content" id="nav-tabContent">
 
-           <!-- Email Tab -->
-           <div class="tab-pane fade active show" id="nav-email" role="tabpanel"
-             aria-labelledby="nav-email-tab">
-             <form id="emailForm" class="form-group flex-wrap p-3 ">
-               <div class="form-input col-lg-12 my-3">
-                 <label for="emailInput" class="form-label fs-6 text-uppercase fw-bold text-black">
-                   Your Email
-                 </label>
-                 <input type="email" id="emailInput" name="email" placeholder="Enter your email"
-                   class="form-control ps-3" required>
-               </div>
-               <div class="form-input col-lg-12 my-3">
-                 <label for="emailMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
-                   Your Message / Prompt
-                 </label>
-                 <textarea id="emailMessage" name="message" rows="4"
-                   placeholder="Type your request here..." class="form-control ps-3" required></textarea>
-               </div>
-               <div class="d-grid my-3">
-                 <button type="submit"
-                   class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                   Send via Email
-                 </button>
-               </div>
-             </form>
-           </div>
+          <!-- Email Tab -->
+          <div class="tab-pane fade active show" id="nav-email" role="tabpanel"
+            aria-labelledby="nav-email-tab">
 
-           <!-- WhatsApp Tab -->
-           <div class="tab-pane fade" id="nav-whatsapp" role="tabpanel" aria-labelledby="nav-whatsapp-tab">
-             <form id="whatsappForm" class="form-group flex-wrap p-3 ">
-               <div class="form-input col-lg-12 my-3">
-                 <label for="phoneInput" class="form-label fs-6 text-uppercase fw-bold text-black">
-                   WhatsApp Number
-                 </label>
-                 <input type="tel" id="phoneInput" name="phone" placeholder="+1 234 567 890"
-                   class="form-control ps-3" required>
-               </div>
-               <div class="form-input col-lg-12 my-3">
-                 <label for="whatsappMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
-                   Your Message / Prompt
-                 </label>
-                 <textarea id="whatsappMessage" name="message" rows="4"
-                   placeholder="Type your request here..." class="form-control ps-3" required></textarea>
-               </div>
-               <div class="d-grid my-3">
-                 <button type="submit" class="btn btn-success btn-lg text-uppercase btn-rounded-none fs-6">
-                   Send via WhatsApp
-                 </button>
-               </div>
-             </form>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
+            <!-- Web3Forms Integration -->
+            <form action="https://api.web3forms.com/submit" method="POST" id="emailForm"
+              class="form-group flex-wrap p-3">
+
+              <!-- Required Web3Forms hidden fields -->
+              <input type="hidden" name="access_key" value="dfebe269-68cd-4555-9565-f105242ae876">
+              <input type="hidden" name="subject" value="New Quote Request from Website">
+              <input type="hidden" name="from_name" value="Elite TechWave Website">
+              <input type="hidden" name="redirect" value="https://web3forms.com/success">
+              <input type="checkbox" name="botcheck" style="display: none;">
+
+              <!-- User Fields -->
+              <div class="form-input col-lg-12 my-3">
+                <label for="emailInput" class="form-label fs-6 text-uppercase fw-bold text-black">
+                  Your Email
+                </label>
+                <input type="email" id="emailInput" name="email" placeholder="Enter your email"
+                  class="form-control ps-3" required>
+              </div>
+
+              <div class="form-input col-lg-12 my-3">
+                <label for="emailMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
+                  Your Message / Prompt
+                </label>
+                <textarea id="emailMessage" name="message" rows="4"
+                  placeholder="Type your request here..." class="form-control ps-3" required></textarea>
+              </div>
+
+              <div class="d-grid my-3">
+                <button type="submit"
+                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                  Send via Email
+                </button>
+              </div>
+            </form>
+          </div>
+          
+          <!-- Free Text Message (Telegram) Tab -->
+          <div class="tab-pane fade" id="nav-whatsapp" role="tabpanel" aria-labelledby="nav-whatsapp-tab">
+              <form id="telegramForm" class="form-group flex-wrap p-3 ">
+                <div class="form-input col-lg-12 my-3">
+                  <label for="telegramEmail" class="form-label fs-6 text-uppercase fw-bold text-black">
+                    Your Number
+                  </label>
+                  <input type="tel" id="telegramEmail" name="email" placeholder="Enter your number"
+                  class="form-control ps-3" required>
+                </div>
+                <div class="form-input col-lg-12 my-3">
+                  <label for="telegramMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
+                    Your Message / Prompt
+                  </label>
+                  <textarea id="telegramMessage" name="message" rows="4"
+                    placeholder="Type your request here..." class="form-control ps-3" required></textarea>
+                </div>
+                <div class="d-grid my-3">
+                  <button type="submit" class="btn btn-success btn-lg text-uppercase btn-rounded-none fs-6">
+                    Send Free Text Message
+                  </button>
+                </div>
+              </form>
+
+              <!-- Success or error feedback -->
+              <div id="telegramStatus" class="text-center mt-2 fw-bold"></div>
+          </div>
+
+          <!-- Telegram Message Script -->
+          <script>
+              document.getElementById("telegramForm").addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              const BOT_TOKEN = "8293726492:AAFXmHj-yyFt0R-8vWzBE1coGKCIB54A9Vs";
+              const CHAT_ID = "702164771";
+              const email = document.getElementById("telegramEmail").value;
+              const message = document.getElementById("telegramMessage").value;
+
+              const text = `📩 *New Message from Website*\n\n👤 Email: ${email}\n💬 Message:\n${message}`;
+
+              fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  chat_id: CHAT_ID,
+                  text: text,
+                  parse_mode: "Markdown"
+                })
+              })
+              .then(response => {
+                if (response.ok) {
+                  document.getElementById("telegramStatus").innerHTML =
+                    "<span class='text-success'>✅ Message sent successfully!</span>";
+                  e.target.reset();
+                } else {
+                  document.getElementById("telegramStatus").innerHTML =
+                    "<span class='text-danger'>❌ Failed to send message.</span>";
+                }
+              })
+              .catch(error => {
+                console.error(error);
+                document.getElementById("telegramStatus").innerHTML =
+                  "<span class='text-danger'>⚠️ Error sending message.</span>";
+              });
+            });
+          </script>
+        </div> <!-- end tab-content -->
+      </div> <!-- end tabs-listing -->
+    </div> <!-- end modal-body -->
+  </div>
 </div>
+</div>
+
   <!-- Hero Section Starts -->
   <section id="hero">
     <div class="image-holder position-relative">
@@ -200,19 +257,6 @@
     </div>
   </section>
 
-  <!-- brand section starts  -->
-  <!-- <section id="brands" class="container-fluid brand-block ">
-    <div class=" brand-names d-lg-flex justify-content-between ">
-      <img class=" mb-5 mb-lg-0 me-4 " src="images/Cisco.png" alt="">
-      <img class=" mb-5 mb-lg-0 me-4 " src="images/Dell.png" alt="">
-      <img class=" mb-5 mb-lg-0 me-4 " src="images/HP.png" alt="">
-      <img class=" mb-5 mb-lg-0 me-4 " src="images/Oracle.png" alt="">
-      <img class=" mb-5 mb-lg-0 me-4 " src="images/Lenovo.png" alt="">
-      <img class=" mb-5 mb-lg-0 me-4 " src="images/Hemmersbach.png" alt="">
-      
-    </div>
-  </section>
--->
   <section id="brands" class="brand-block">
     <h3 class="brand-section-title">Companies We Are Certified From</h3>
     <div class="brand-names">
@@ -224,7 +268,6 @@
       <img src="images/Hemmersbach.png" alt="Hemmersbach">
     </div>
   </section>
-
 
   <!-- steps section starts  -->
   <section id="steps">
