@@ -78,98 +78,96 @@
               </li>
             </ul>
             <ul class="navbar-nav justify-content-end align-items-center mt-4 mb-2 mt-lg-0 mb-lg-0"></ul>
-
-            <!-- Modal -->
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-
-                  <div class="modal-body">
-                    <div class="tabs-listing">
-                      <!-- Tabs -->
-                      <nav>
-                        <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
-                          <button class="btn btn-outline-primary text-uppercase px-4 py-2 me-4 active"
-                            id="nav-email-tab" data-bs-toggle="tab" data-bs-target="#nav-email" type="button" role="tab"
-                            aria-controls="nav-email" aria-selected="true">Email</button>
-                          <button class="btn btn-outline-primary text-uppercase px-4 py-2" id="nav-whatsapp-tab"
-                            data-bs-toggle="tab" data-bs-target="#nav-whatsapp" type="button" role="tab"
-                            aria-controls="nav-whatsapp" aria-selected="false">WhatsApp</button>
-                        </div>
-                      </nav>
-
-                      <!-- Tab Content -->
-                      <div class="tab-content" id="nav-tabContent">
-
-                        <!-- Email Tab -->
-                        <div class="tab-pane fade active show" id="nav-email" role="tabpanel"
-                          aria-labelledby="nav-email-tab">
-                          <form id="emailForm" class="form-group flex-wrap p-3 ">
-                            <div class="form-input col-lg-12 my-3">
-                              <label for="emailInput" class="form-label fs-6 text-uppercase fw-bold text-black">
-                                Your Email
-                              </label>
-                              <input type="email" id="emailInput" name="email" placeholder="Enter your email"
-                                class="form-control ps-3" required>
-                            </div>
-                            <div class="form-input col-lg-12 my-3">
-                              <label for="emailMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
-                                Your Message / Prompt
-                              </label>
-                              <textarea id="emailMessage" name="message" rows="4"
-                                placeholder="Type your request here..." class="form-control ps-3" required></textarea>
-                            </div>
-                            <div class="d-grid my-3">
-                              <button type="submit"
-                                class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
-                                Send via Email
-                              </button>
-                            </div>
-                          </form>
-                        </div>
-
-                        <!-- WhatsApp Tab -->
-                        <div class="tab-pane fade" id="nav-whatsapp" role="tabpanel" aria-labelledby="nav-whatsapp-tab">
-                          <form id="whatsappForm" class="form-group flex-wrap p-3 ">
-                            <div class="form-input col-lg-12 my-3">
-                              <label for="phoneInput" class="form-label fs-6 text-uppercase fw-bold text-black">
-                                WhatsApp Number
-                              </label>
-                              <input type="tel" id="phoneInput" name="phone" placeholder="+1 234 567 890"
-                                class="form-control ps-3" required>
-                            </div>
-                            <div class="form-input col-lg-12 my-3">
-                              <label for="whatsappMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
-                                Your Message / Prompt
-                              </label>
-                              <textarea id="whatsappMessage" name="message" rows="4"
-                                placeholder="Type your request here..." class="form-control ps-3" required></textarea>
-                            </div>
-                            <div class="d-grid my-3">
-                              <button type="submit" class="btn btn-success btn-lg text-uppercase btn-rounded-none fs-6">
-                                Send via WhatsApp
-                              </button>
-                            </div>
-                          </form>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   </header>
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+ <div class="modal-dialog">
+   <div class="modal-content">
 
+     <!-- Modal Header -->
+     <div class="modal-header">
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+
+     <div class="modal-body">
+       <div class="tabs-listing">
+         <!-- Tabs -->
+         <nav>
+           <div class="nav nav-tabs d-flex justify-content-center border-0" id="nav-tab" role="tablist">
+             <button class="btn btn-outline-primary text-uppercase px-4 py-2 me-4 active"
+               id="nav-email-tab" data-bs-toggle="tab" data-bs-target="#nav-email" type="button" role="tab"
+               aria-controls="nav-email" aria-selected="true">Email</button>
+             <button class="btn btn-outline-primary text-uppercase px-4 py-2" id="nav-whatsapp-tab"
+               data-bs-toggle="tab" data-bs-target="#nav-whatsapp" type="button" role="tab"
+               aria-controls="nav-whatsapp" aria-selected="false">WhatsApp</button>
+           </div>
+         </nav>
+
+         <!-- Tab Content -->
+         <div class="tab-content" id="nav-tabContent">
+
+           <!-- Email Tab -->
+           <div class="tab-pane fade active show" id="nav-email" role="tabpanel"
+             aria-labelledby="nav-email-tab">
+             <form id="emailForm" class="form-group flex-wrap p-3 ">
+               <div class="form-input col-lg-12 my-3">
+                 <label for="emailInput" class="form-label fs-6 text-uppercase fw-bold text-black">
+                   Your Email
+                 </label>
+                 <input type="email" id="emailInput" name="email" placeholder="Enter your email"
+                   class="form-control ps-3" required>
+               </div>
+               <div class="form-input col-lg-12 my-3">
+                 <label for="emailMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
+                   Your Message / Prompt
+                 </label>
+                 <textarea id="emailMessage" name="message" rows="4"
+                   placeholder="Type your request here..." class="form-control ps-3" required></textarea>
+               </div>
+               <div class="d-grid my-3">
+                 <button type="submit"
+                   class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
+                   Send via Email
+                 </button>
+               </div>
+             </form>
+           </div>
+
+           <!-- WhatsApp Tab -->
+           <div class="tab-pane fade" id="nav-whatsapp" role="tabpanel" aria-labelledby="nav-whatsapp-tab">
+             <form id="whatsappForm" class="form-group flex-wrap p-3 ">
+               <div class="form-input col-lg-12 my-3">
+                 <label for="phoneInput" class="form-label fs-6 text-uppercase fw-bold text-black">
+                   WhatsApp Number
+                 </label>
+                 <input type="tel" id="phoneInput" name="phone" placeholder="+1 234 567 890"
+                   class="form-control ps-3" required>
+               </div>
+               <div class="form-input col-lg-12 my-3">
+                 <label for="whatsappMessage" class="form-label fs-6 text-uppercase fw-bold text-black">
+                   Your Message / Prompt
+                 </label>
+                 <textarea id="whatsappMessage" name="message" rows="4"
+                   placeholder="Type your request here..." class="form-control ps-3" required></textarea>
+               </div>
+               <div class="d-grid my-3">
+                 <button type="submit" class="btn btn-success btn-lg text-uppercase btn-rounded-none fs-6">
+                   Send via WhatsApp
+                 </button>
+               </div>
+             </form>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
   <!-- Hero Section Starts -->
   <section id="hero">
     <div class="image-holder position-relative">
@@ -686,4 +684,3 @@
 
 
 </html>
-
